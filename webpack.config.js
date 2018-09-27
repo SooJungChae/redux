@@ -1,11 +1,29 @@
-import webpack from 'webpack';
+// import webpack from 'webpack';
+// import path from 'path';
+const webpack = require('webpack');
+const path = require('path');
 
-webpack.exports = {
+module.exports = {
     mode: 'development',
-    entry: 'index.js',
-    output: 'bundle.js',
-    resolve: {
-        modules: ['node_modules'],
-        extensions: ['.js', '.jsx']
+    entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/dist/',
+        filename: 'bundle.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                include: path.join(__dirname),
+                exclude: /(node_modules)|(dist)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['env']
+                    }
+                }
+            }
+        ]
     }
 }
