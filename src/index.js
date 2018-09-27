@@ -1,8 +1,7 @@
-import http from 'http';
+// import http from 'http';
+import counter from './counter';
+import expect from 'expect';
 
-const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type' : 'text/plain' });
-    res.end('Hello World');
-});
-
-server.listen('8000');
+expect(
+    counter(0, {type: 'INCREMENT'})
+).toEqual(1);
