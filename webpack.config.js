@@ -15,15 +15,9 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                include: path.join(__dirname),
-                exclude: /(node_modules)|(dist)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['env']
-                    }
-                }
+                use: ['babel-loader']
             }
         ]
     }
+
 }
