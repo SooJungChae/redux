@@ -4,15 +4,19 @@ class App extends Component {
     state = {
         count: 0
     }
+    // constructor(props) {
+    //     super(props);
+    //
+    //     this.state = {
+    //         count: 0
+    //     }
+    // }
 
     render() {
-        const state = {
-            count: 0
-        };
 
         return (
           <div>
-              <input value={this.state.count} />
+              <input defaultValue={this.state.count} />
             <button>Increment</button>
           </div>
         );
