@@ -2,4 +2,7 @@
 
 .idea/workspace.xml
 .idea/
+.idea/misc.xml
+.idea/redux.xml
+.idea/workspace.xml
 dist/

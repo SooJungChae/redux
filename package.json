@@ -4,10 +4,12 @@
   "description": "",
   "main": "counter.js",
   "dependencies": {
+    "@types/react": "^16.4.14",
     "babel": "^6.23.0",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
     "expect": "^23.6.0",
     "expect.js": "^0.3.1",
@@ -23,11 +25,7 @@
     "build": "webpack",
     "devserver": "webpack-dev-server --open --progress"
   },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {}
 }

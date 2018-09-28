@@ -1,7 +1,11 @@
 // import http from 'http';
-import counter from './counter';
-import expect from 'expect';
+import counter from './reducers/counter';
+import App from './containers/App';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-expect(
-    counter(0, {type: 'INCREMENT'})
-).toEqual(1);
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+);
+
